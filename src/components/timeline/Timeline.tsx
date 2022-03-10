@@ -1,5 +1,7 @@
 import { memo, VFC } from "react";
+import { Post } from "./Post";
 import "./Timeline.css";
+import { TweetBox } from "./TweetBox";
 
 type Props = {};
 
@@ -13,8 +15,17 @@ export const Timeline: VFC<Props> = memo((props) => {
       </div>
 
       {/* tweetBox*/}
-
+      <TweetBox/>
       {/* Post*/}
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
     </div>
   );
 });
