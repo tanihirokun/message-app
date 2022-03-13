@@ -32,7 +32,7 @@ export const SideBar: VFC = memo(() => {
 
 
       {/* ツイートボタン */}
-      <Button variant="outlined" className="sidebar__tweet">ツイートする</Button>
+      <Button variant="outlined" className="sidebar__tweet" fullWidth>ツイートする</Button>
     </div>
   )
 })
