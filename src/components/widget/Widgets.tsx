@@ -22,12 +22,15 @@ export const Widgets: VFC<Props> = memo((props) => {
       <div className="widgets__widgetContainer">
         <h2>いまどうしてる</h2>
         {/* ライブラリを追加 */}
+        {/* Twitterの固定ツイートの追加 */}
         <TwitterTweetEmbed tweetId={"1490335700272566276"} />
+        {/* Twitterのタイムラインの表示 */}
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="tani_web"
           options={{ height: 400 }}
         />
+        {/* Twitterのツイートボタンの追加 URL必須 */}
         <TwitterShareButton url="https://twitter.com/tani_web"
         options={{text: 'React勉強中', via: 'tani_web'}}
         />
