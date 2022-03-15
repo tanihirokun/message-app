@@ -10,31 +10,38 @@ import { memo, VFC } from "react";
 
 import "./Post.css";
 
-type Props = {};
+type Props = {
+  displayName: string;
+  username: string;
+  verified: boolean;
+  text: string;
+  avatar: string;
+  image: string;
+};
 
 export const Post: VFC<Props> = memo((props) => {
-  const {} = props;
+  const { displayName, username, verified, text, avatar, image } = props;
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar />
+        <Avatar src={avatar}/>
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__header-text">
             <h3>
-              プログラミングチュートリアル
+              {displayName}
               <span className="post__headerSpecial">
                 <Verified className="post__badge" />
-                @tani_Enginner
+                @{username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>Reactなう</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="https://source.unsplash.com/random" alt="画像" />
+        <img src={image} alt="画像"/>
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />
