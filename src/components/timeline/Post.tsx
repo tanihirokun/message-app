@@ -6,7 +6,7 @@ import {
   Verified,
 } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
-import { memo, VFC } from "react";
+import {  memo, VFC } from "react";
 
 import "./Post.css";
 
@@ -19,10 +19,11 @@ type Props = {
   image: string;
 };
 
-export const Post: VFC<Props> = memo((props) => {
-  const { displayName, username, verified, text, avatar, image } = props;
+
+export const Post: VFC<Props> =  memo((props) => {
+  const { displayName, username, text, avatar, image } = props;
   return (
-    <div className="post">
+    <div className="post" >
       <div className="post__avatar">
         <Avatar src={avatar}/>
       </div>
@@ -41,7 +42,7 @@ export const Post: VFC<Props> = memo((props) => {
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="画像"/>
+        <img src={image} alt=""/>
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />

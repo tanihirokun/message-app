@@ -21,7 +21,7 @@ export const SideBar: VFC = memo(() => {
       <TwitterIcon className="sidebar__twitterIcon"/>
 
       {/* sidebarOption */}
-      <SideBarOption text='ホーム' icon={<HomeIcon />}/>
+      <SideBarOption text='ホーム' icon={<HomeIcon />} active/>
       <SideBarOption text='話題を検索' icon={<SearchIcon />}/>
       <SideBarOption text='通知' icon={<NotificationsNoneIcon />}/>
       <SideBarOption text='メッセージ' icon={<MailOutlineIcon />}/>
